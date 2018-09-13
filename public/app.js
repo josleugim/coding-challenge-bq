@@ -20,5 +20,10 @@ function configuration($locationProvider, $stateProvider, $urlRouterProvider, Id
             url: '/track',
             templateUrl: '/templates/track/index.html',
             controller: 'TrackCtrl',
+        })
+        .state('country', {
+            url: '/country',
+            templateUrl: '/templates/country/index.html',
+            controller: 'CountryCtrl',
         });
 }
