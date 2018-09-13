@@ -1,0 +1,23 @@
+{
+  "name": "coding-challenge-bq",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mordekaiser <josleugim@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/josleugim/coding-challenge-bq",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-resource": "^1.7.4",
+    "angular": "^1.7.4",
+    "angular-ui-router": "^1.0.20"
+  }
+}
