@@ -40,13 +40,16 @@ exports.getById = (req, res) => {
 };
 
 exports.put = (req, res) => {
-    let query = " ";
+    let query = "UPDATE tracks SET ";
     const resData = {
         success: true
     };
 
     if(req.params.id && Number(req.params.id) && req.body.title) {
-        query = "UPDATE tracks SET title = '" + req.body.title + "' WHERE id = " + req.params.id;
+        if(req.body.artistName && req.body.userid) {
+            query = query + "title = '" + req.body.title + "', artist = '" + req.body.artistName + "', userid = " + req.body.userid;
+        }
+        query = query + " WHERE id = " + req.params.id;
         db.query(query, (err, row) => {
             if(err) {
                 console.error('Error:', err);

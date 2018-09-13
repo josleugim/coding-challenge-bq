@@ -6,6 +6,7 @@ const app = express();
 const config = require('./server/config/configuration');
 require('./server/config/express')(app, config);
 require('./server/routes/v1/tracks')(app);
+require('./server/routes/v1/artists')(app);
 require('./server/routes/v1/home')(app, config);
 
 app.listen(config.development.port, function () {
