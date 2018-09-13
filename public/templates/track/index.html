@@ -1,0 +1,13 @@
+<section>
+    <form name="trackForm">
+        <label>Title</label>
+        <input ng-model="track.title" name="title" placeholder="Title" required>
+        <label>Artista</label>
+        <input ng-model="track.artist" name="artist" placeholder="Artista" disabled>
+        <button ng-click="updateTrack()" ng-disabled="trackForm.$invalid">Save</button>
+    </form>
+</section>
+<h2>Tracks list</h2>
+<ul>
+    <li ng-repeat="track in tracks">{{track.title}} <button ng-click="loadTrack(track)">Update</button></li>
+</ul>
